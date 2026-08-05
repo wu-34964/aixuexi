@@ -445,7 +445,7 @@ watch(subjectFilter, () => {
 
 @media (max-width: 640px) {
   .ebook-shelf {
-    padding: 10px 0;
+    padding: 10px 16px;
   }
 
   .filter-bar {

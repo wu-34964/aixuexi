@@ -12,6 +12,10 @@ export default defineConfig({
   },
 
   themeConfig: {
+    sidebarMenuLabel: '菜单',
+    outline: { label: '本页目录' },
+    returnToTopLabel: '返回顶部',
+
     /*导航栏*/
     nav: [
       { text: '首页', link: '/' },

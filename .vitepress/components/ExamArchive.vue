@@ -509,6 +509,10 @@ watch(filters, () => {
 
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
+  .exam-archive {
+    padding: 16px;
+  }
+
   .filter-bar {
     flex-direction: column;
     gap: 12px;

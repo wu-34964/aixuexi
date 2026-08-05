@@ -850,6 +850,7 @@ const resetSettings = () => {
 }
 
 @media (max-width: 600px) {
+  .paper-tool { padding: 16px; }
   .option-grid { grid-template-columns: 1fr 1fr; }
   .option-grid.small { grid-template-columns: 1fr 1fr; }
   .slider-group.two-col { grid-template-columns: 1fr; }

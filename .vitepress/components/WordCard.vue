@@ -1800,6 +1800,10 @@ if (selectedDifficulty.value !== '' && selectedCount.value !== '') {
 /* ============================================================ */
 
 @media (max-width: 768px) {
+  .word-card-container {
+    padding: 10px 16px;
+  }
+
   .settings-bar {
     gap: 12px;
     padding: 14px 16px;

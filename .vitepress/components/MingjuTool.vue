@@ -530,7 +530,7 @@ onMounted(() => {
 
 @media (max-width: 720px) {
   .mingju-game {
-    padding: 10px 0;
+    padding: 10px 16px;
   }
 
   .scope-form {
