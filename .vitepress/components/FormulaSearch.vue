@@ -153,6 +153,7 @@ onSubjectChange()
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0;
+  min-width: 0;
 }
 
 .page-header {
@@ -255,6 +256,7 @@ onSubjectChange()
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  min-width: 0;
 }
 
 @media (max-width: 768px) {
@@ -270,6 +272,8 @@ onSubjectChange()
   border: 1px solid var(--vp-c-divider);
   transition: all 0.3s;
   position: relative;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .formula-card:hover {
@@ -292,6 +296,8 @@ onSubjectChange()
   text-align: center;
   font-size: 20px;
   overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
   min-height: 52px;
   display: flex;
   align-items: center;
@@ -409,5 +415,20 @@ onSubjectChange()
   font-size: 13px;
   color: var(--vp-c-text-3);
   margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .formula-card {
+    padding: 16px;
+  }
+
+  .formula-display {
+    padding: 10px 8px;
+    font-size: 16px;
+  }
+
+  .formula-display :deep(.katex) {
+    font-size: 1em;
+  }
 }
 </style>

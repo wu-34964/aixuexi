@@ -179,7 +179,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch, nextTick } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { dailyData, getDayData, getTotalDays } from '../data/dailyWords.js'
 
 // ========== 状态 ==========
@@ -187,9 +187,15 @@ const currentDay = ref(1)
 const inputDay = ref(1)
 const totalDays = computed(() => getTotalDays())
 const dayData = computed(() => getDayData(currentDay.value))
-const singleColumn = computed(() => currentDay.value >= 51)
+const narrowScreen = ref(false)
+const singleColumn = computed(() => currentDay.value >= 51 || narrowScreen.value)
 const printArea = ref(null)
 const reviewStates = ref({})
+let narrowScreenQuery
+
+const updateNarrowScreen = (event) => {
+  narrowScreen.value = event.matches
+}
 
 // ========== 进度 ==========
 const progressPercent = computed(() => {
@@ -585,6 +591,13 @@ watch(currentDay, (newDay) => {
 onMounted(() => {
   loadReviewStates()
   inputDay.value = currentDay.value
+  narrowScreenQuery = window.matchMedia('(max-width: 768px)')
+  narrowScreen.value = narrowScreenQuery.matches
+  narrowScreenQuery.addEventListener('change', updateNarrowScreen)
+})
+
+onBeforeUnmount(() => {
+  narrowScreenQuery?.removeEventListener('change', updateNarrowScreen)
 })
 </script>
 
@@ -869,6 +882,17 @@ onMounted(() => {
   .print-area { padding: 16px; }
   .word-table { font-size: 12px; }
   .word-table th, .word-table td { padding: 4px 2px; }
+  .single-column { table-layout: fixed; }
+  .single-column th:nth-child(1) { width: 7% !important; }
+  .single-column th:nth-child(2) { width: 18%; }
+  .single-column th:nth-child(3) { width: 18%; }
+  .single-column th:nth-child(4) { width: 12%; }
+  .single-column th:nth-child(5) { width: 45%; }
+  .single-column .meaning-cell {
+    text-align: left;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
   .day-selector { gap: 8px; padding: 12px 16px; }
   .day-input { width: 50px; font-size: 14px; }
   .day-label { font-size: 13px; }

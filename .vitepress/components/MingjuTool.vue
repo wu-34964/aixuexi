@@ -425,6 +425,8 @@ onMounted(() => {
   transform-style: preserve-3d;
   transition: transform 0.55s ease;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .question-card.flipped {
