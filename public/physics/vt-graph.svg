@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-labelledby="title desc">
+  <title id="title">匀加速直线运动速度时间图像</title>
+  <desc id="desc">速度从初速度v0随时间线性增加，直线斜率表示加速度，图线下方面积表示位移。</desc>
+  <rect width="560" height="300" rx="18" fill="#f8fafc"/>
+  <g stroke="#64748b" stroke-width="2" fill="none">
+    <path d="M72 244V40M72 244H516"/>
+    <path d="M67 48l5-10 5 10M508 239l10 5-10 5"/>
+  </g>
+  <path d="M74 210L470 72" stroke="#2563eb" stroke-width="5" fill="none"/>
+  <path d="M74 210L470 72V244H74Z" fill="#93c5fd" opacity=".32"/>
+  <g fill="#0f172a" font-family="Arial, sans-serif" font-size="18">
+    <text x="42" y="48">v</text><text x="506" y="270">t</text><text x="38" y="216">v₀</text>
+    <text x="260" y="276">面积 = 位移</text><text x="298" y="116">斜率 = a</text>
+  </g>
+</svg>
