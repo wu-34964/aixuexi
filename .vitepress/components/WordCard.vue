@@ -1309,6 +1309,8 @@ if (selectedDifficulty.value !== '' && selectedCount.value !== '') {
   min-height: 280px;
   margin-bottom: 20px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .card-inner {
@@ -1900,6 +1902,7 @@ if (selectedDifficulty.value !== '' && selectedCount.value !== '') {
 @media (max-width: 480px) {
   .settings-bar {
     flex-direction: column;
+    align-items: stretch;
     gap: 10px;
     padding: 12px 14px;
   }
@@ -1907,6 +1910,7 @@ if (selectedDifficulty.value !== '' && selectedCount.value !== '') {
   .settings-group {
     flex: 1 1 100%;
     min-width: unset;
+    width: 100%;
   }
 
   .settings-group label {
@@ -1914,8 +1918,23 @@ if (selectedDifficulty.value !== '' && selectedCount.value !== '') {
   }
 
   .settings-group select {
+    width: 100%;
     font-size: 13px;
     padding: 8px 12px;
+  }
+
+  .word-count-badge {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .settings-group:last-child label {
+    display: none;
+  }
+
+  .btn-history {
+    width: 100%;
   }
 
   .mode-tabs {
