@@ -9,7 +9,7 @@
       <a
         v-for="item in navItems"
         :key="item.link"
-        :href="item.link"
+        :href="withBase(item.link)"
         class="nav-card"
       >
         <div class="card-icon-wrapper">
@@ -26,6 +26,8 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
+
 const navItems = [
   { icon: '📚', name: '历年真题', desc: '历年高考真题，按年份地区分类', link: '/tools/历年真题' },
   { icon: '📐', name: '公式查询', desc: '数学、物理常用公式速查', link: '/tools/公式查询' },

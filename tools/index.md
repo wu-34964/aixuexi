@@ -3,37 +3,37 @@
 这里汇集了帮助你高效学习的小工具，点击即可使用。
 
 <div class="tool-grid">
-  <a href="/tools/单词攻坚" class="tool-card">
+  <a href="./单词攻坚" class="tool-card">
     <div class="tool-icon">🔠</div>
     <h3>单词攻坚</h3>
     <p>按照难度分级，自定义单词数量</p>
   </a>
-  <a href="/tools/公式查询" class="tool-card">
+  <a href="./公式查询" class="tool-card">
     <div class="tool-icon">🔦</div>
     <h3>公式查询</h3>
     <p>数学、物理常用公式速查</p>
   </a>
-  <a href="/tools/打印模板" class="tool-card">
+  <a href="./打印模板" class="tool-card">
     <div class="tool-icon">🖨</div>
     <h3>打印模板</h3>
     <p>笔记、计划、单词卡等多种模板一键打印</p>
   </a>
-  <a href="/tools/计时工具" class="tool-card">
+  <a href="./计时工具" class="tool-card">
     <div class="tool-icon">⏱️</div>
     <h3>计时工具</h3>
     <p>番茄钟专注学习，提高效率</p>
   </a>
-    <a href="/tools/150天背单词" class="tool-card">
+    <a href="./150天背单词" class="tool-card">
     <div class="tool-icon">📖</div>
     <h3>150天背完3000词</h3>
     <p>每天一个页面，系统掌握高考核心词汇</p>
 </a>
-  <a href="/tools/电子课本" class="tool-card">
+  <a href="./电子课本" class="tool-card">
     <div class="tool-icon">📚</div>
     <h3>电子课本</h3>
     <p>查找课本封面，跳转百度网盘下载</p>
   </a>
-  <a href="/tools/名句默写" class="tool-card">
+  <a href="./名句默写" class="tool-card">
     <div class="tool-icon">📝</div>
     <h3>名句默写</h3>
     <p>按课本和篇目筛选，翻卡查看答案</p>

@@ -4,6 +4,8 @@ layout: home
 ---
 
 <script setup>
+import { withBase } from 'vitepress'
+
 const subjects = [
   { name: '语文', icon: '📖', color: '#3b82f6', link: '/语文/前言', desc: '语言建构与运用·文化传承' },
   { name: '数学', icon: '📐', color: '#f59e0b', link: '/数学/前言', desc: '逻辑推理·数学建模' },
@@ -133,7 +135,7 @@ const subjects = [
 <div class="subjects-container">
   <a v-for="subject in subjects" 
      :key="subject.name"
-     :href="subject.link" 
+     :href="withBase(subject.link)"
      class="subject-card">
     <div class="icon">{{ subject.icon }}</div>
     <div class="name">{{ subject.name }}</div>

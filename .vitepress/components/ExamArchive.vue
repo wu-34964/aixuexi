@@ -12,7 +12,7 @@
         <div class="banner-title">不确定自己省份使用哪套试卷？</div>
         <div class="banner-desc">高考改革后各省试卷类型不同，点击下方按钮查看完整对照表</div>
       </div>
-      <a href="/tools/试卷类型对照表" class="banner-btn" target="_blank">
+      <a :href="withBase('/tools/试卷类型对照表')" class="banner-btn" target="_blank">
         查看试卷类型对照表 →
       </a>
     </div>
@@ -101,6 +101,7 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { withBase } from 'vitepress'
 import { examLinks } from '../data/examLinks.js'
 
 const allYears = Array.from({ length: 2026 - 2008 + 1 }, (_, index) => String(2026 - index))
