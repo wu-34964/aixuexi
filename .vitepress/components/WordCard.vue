@@ -264,24 +264,32 @@
                   </button>
                 </div>
 
-                <div v-if="quizSelectedOption" class="quiz-feedback">
-                  <div v-if="quizSelectedOption.id === currentQuizWord.id" class="feedback-correct">
-                    ✅ 正确！{{ currentQuizWord.meaning }}
-                  </div>
-                  <div v-else class="feedback-wrong">
-                    ❌ 正确答案是：{{ currentQuizWord.meaning }}
-                  </div>
-                  <div class="feedback-example">{{ currentQuizWord.example_cn }}</div>
+                <div class="quiz-feedback" :class="{ 'is-placeholder': !quizSelectedOption }">
+                  <template v-if="quizSelectedOption">
+                    <div v-if="quizSelectedOption.id === currentQuizWord.id" class="feedback-correct">
+                      ✅ 正确！{{ currentQuizWord.meaning }}
+                    </div>
+                    <div v-else class="feedback-wrong">
+                      ❌ 正确答案是：{{ currentQuizWord.meaning }}
+                    </div>
+                    <div class="feedback-example">{{ currentQuizWord.example_cn }}</div>
+                  </template>
                 </div>
 
                 <div class="quiz-actions">
-                  <button class="btn btn-outline" @click="resetQuiz">🔄 重新开始</button>
                   <button 
                     class="btn btn-primary" 
                     @click="nextQuizQuestion" 
                     :disabled="!quizSelectedOption"
                   >
                     {{ quizIndex === quizWords.length - 1 ? '📊 查看结果' : '下一题 ➡' }}
+                  </button>
+                  <button
+                    v-if="quizSelectedOption && quizIndex === quizWords.length - 1"
+                    class="btn btn-outline"
+                    @click="resetQuiz"
+                  >
+                    🔄 重新开始
                   </button>
                 </div>
               </div>
@@ -1550,8 +1558,15 @@ if (selectedDifficulty.value !== '' && selectedCount.value !== '') {
 .quiz-feedback {
   margin-top: 20px;
   padding: 16px 20px;
+  height: 96px;
+  box-sizing: border-box;
   border-radius: 10px;
   text-align: center;
+  overflow-y: auto;
+}
+
+.quiz-feedback.is-placeholder {
+  visibility: hidden;
 }
 
 .feedback-correct {
