@@ -3,6 +3,11 @@
 这里汇集了帮助你高效学习的小工具，点击即可使用。
 
 <div class="tool-grid">
+  <a href="./历史时间线" class="tool-card">
+    <div class="tool-icon">⏳</div>
+    <h3>历史时间线</h3>
+    <p>中外大事对照浏览，翻卡巩固时空框架</p>
+  </a>
   <a href="./单词攻坚" class="tool-card">
     <div class="tool-icon">🔠</div>
     <h3>单词攻坚</h3>
