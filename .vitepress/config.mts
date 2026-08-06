@@ -700,6 +700,7 @@ export default defineConfig({
             { text: '📅 历年真题', link: '/tools/历年真题' },
             { text: '📖 3000单词', link: '/tools/150天背单词' },
             { text: '🔦 公式查询', link: '/tools/公式查询' },
+            { text: '⚗️ 化学方程式', link: '/tools/化学方程式' },
             { text: '🔠 单词攻坚', link: '/tools/单词攻坚' },
             { text: '🖨️ 打印模板', link: '/tools/打印模板' },
             { text: '⏱️ 计时工具', link: '/tools/计时工具' },

@@ -31,6 +31,7 @@ import { withBase } from 'vitepress'
 const navItems = [
   { icon: '📚', name: '历年真题', desc: '历年高考真题，按年份地区分类', link: '/tools/历年真题' },
   { icon: '📐', name: '公式查询', desc: '数学、物理常用公式速查', link: '/tools/公式查询' },
+  { icon: '⚗️', name: '化学方程式', desc: '方程式速查、自动配平与记忆练习', link: '/tools/化学方程式' },
   { icon: '🔠', name: '单词攻坚', desc: '科学记忆，高效背单词', link: '/tools/单词攻坚' },
   { icon: '⏱️', name: '计时工具', desc: '学科计时 + 番茄时钟', link: '/tools/计时工具' },
   { icon: '📖', name: '电子课本', desc: '查找课本封面，跳转网盘下载', link: '/tools/电子课本' },

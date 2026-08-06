@@ -33,6 +33,11 @@
     <h3>电子课本</h3>
     <p>查找课本封面，跳转百度网盘下载</p>
   </a>
+  <a href="./化学方程式" class="tool-card">
+    <div class="tool-icon">⚗️</div>
+    <h3>化学方程式</h3>
+    <p>核心反应速查、自动配平与记忆练习</p>
+  </a>
   <a href="./名句默写" class="tool-card">
     <div class="tool-icon">📝</div>
     <h3>名句默写</h3>
